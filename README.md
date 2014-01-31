@@ -121,12 +121,14 @@ Learn the standard library of the language of your choice. This will help you by
 ### Queues
 A queue is very similar to a stack, in that it also supports the operations `put()`(I called it `push()` before, but it's called `put()` in Python) and `get()`(a.k.a. `pop()`), but instead of the most recent items getting popped, it's the first items which were pushed on that get popped out(first in, first out, or FIFO.) Python has these in its standard library in the Queue module. To declare one, do
 
+```
 import Queue
 myQueue = Queue.Queue()
 myQueue.put(5)
 myQueue.put(10)
 front = myQueue.get()
 print(front) #is 5
+```
 
 You can also implement a stack-like LIFO data structure using Queues too, using `Queue.LifoQueue()` in Python.
 
@@ -161,10 +163,12 @@ A good hash function should be extremely fast to compute. Cryptographic-strength
 
 ### Hash Collision Resolution
 There are four methods of hash collision resolution I will talk about. These are
+
 * Linear probing
 * Quadratic probing
 * Separate chaining
 * Double hashing
+
 #### Linear Probing
 If a hash collision occurs(that is, if the value at the index returned from the hash function is different than the hashed value), the probe goes to the next element in the array. If an empty position in the array is found, the element is inserted there. Searching operates much the same way.
 
